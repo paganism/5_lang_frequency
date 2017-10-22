@@ -2,7 +2,7 @@ from collections import Counter
 import sys
 
 filepath = sys.argv[1]
-
+count_to_output = 10
 
 def load_data(filepath):
     with open(filepath, 'r') as f:
@@ -14,7 +14,7 @@ def get_most_frequent_words(text):
     clean_data = []
     for word in text:
         clean_data.append(word.strip(',.!-'))
-    return Counter(text).most_common(10)
+    return Counter(text).most_common(count_to_output)
 
 
 if __name__ == '__main__':
