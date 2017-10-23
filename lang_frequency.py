@@ -19,5 +19,5 @@ def get_most_frequent_words(text):
 
 if __name__ == '__main__':
     filepath = sys.argv[1]
-    for data in range(len(get_most_frequent_words(load_data(filepath)))):
-        print("Слово: ", get_most_frequent_words(load_data(filepath))[data][0], "количество повторений: ", get_most_frequent_words(load_data(filepath))[data][1])
+    for resultdata in range(len(get_most_frequent_words(load_data(filepath)))):
+        print("Слово: ", get_most_frequent_words(load_data(filepath))[resultdata][0], "количество повторений: ", get_most_frequent_words(load_data(filepath))[resultdata][1])
