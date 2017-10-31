@@ -4,8 +4,8 @@ import re
 
 
 def load_data(filepath):
-    with open(filepath, 'r') as f:
-        raw_data = f.read()
+    with open(filepath, 'r') as file:
+        raw_data = file.read()
     return raw_data
 
 
