@@ -1,5 +1,6 @@
 from collections import Counter
 import sys
+import re
 
 
 def load_data(filepath):
@@ -8,16 +9,14 @@ def load_data(filepath):
     return raw_data
 
 
-def get_most_frequent_words(text):
+def get_most_frequent_words_re(text):
     count_to_output = 10
-    splitted_text = text.split()
-    clean_data = []
-    for word in text:
-        clean_data.append(word.strip(',.!-[]()*/{}+=<>?&^$#@~`;:'))
-    return Counter(splitted_text).most_common(count_to_output)
+    clean_list = re.findall(r'\w+', text)
+    print(clean_list)
+    return Counter(clean_list).most_common(count_to_output)
 
 
 if __name__ == '__main__':
     filepath = sys.argv[1]
-    for resultdata in range(len(get_most_frequent_words(load_data(filepath)))):
-        print("Слово: ", get_most_frequent_words(load_data(filepath))[resultdata][0], "количество повторений: ", get_most_frequent_words(load_data(filepath))[resultdata][1])
+    for item in get_most_frequent_words_re(load_data(filepath)):
+        print(item[0], "repeated ", item[1], "times")

@@ -1,17 +1,34 @@
-# Частотный анализ слов
+# Frequency Analysis of Words
 
-Скрипт, который принимаут на вход путь до текстового файла и выводит в консоль десять самых популярных слов в этом файле в порядке убывания частоты.
+This script finds ten most frequent words in text
 
-# Как запустить
+# Quickstart
 
-Запуск на Linux:
+Script argument is required - path to file
 
-		user@server: python3.5 lang_frequency.py /tmp/textfile.txt
+Possibly requires call of python3 executive instead of just python
 
-		result:
-		[('и', 2), ('на', 2), ('в', 2), ('Ночью', 1), ('утром', 1), ('23', 1), ('октября', 1), ('дорогах', 1), ('Петербурге', 1), ('ожидается', 1)]
-Запуск на Windows происходит аналогично.
-# Цель проекта
+Example of script launch on Linux, Python 3.5:
 
-Код написан в образовательных целях
-[DEVMAN.org](https://devman.org)
+
+```bash
+
+python3.5 lang_frequency.py path_to_file
+Гордон 5 
+В 4 
+году 4 
+с 4 
+в 3 
+Катя 3 
+на 3 
+как 3 
+от 2 
+её 2 
+
+```
+
+Running on Windows is similar
+
+# Project Goals
+
+The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
