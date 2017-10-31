@@ -19,4 +19,4 @@ def get_most_frequent_words_re(text):
 if __name__ == '__main__':
     filepath = sys.argv[1]
     for item in get_most_frequent_words_re(load_data(filepath)):
-        print(item[0], "repeated ", item[1], "times")
+        print(item[0], item[1])
